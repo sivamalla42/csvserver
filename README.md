@@ -39,7 +39,7 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
      2, 34
      ```
      These are comma separated values with index and a random number.
-     - Running the script without any arguments, should generate the file `inputFile` with 10 such entries in current directory.
+     - Running the script with arguments `bash gencsv.sh 0 9`, should generate the file `inputFile` with 10 such entries in current directory.
      - *You should be able to extend this script to generate any number of entries, for example 100000 entries.*
      - Run the script to generate the `inputFile`. Make sure that the generated file is readable by other users.
   4. Run the container again in the background with file generated in (3) available inside the container (remember the reason you found in (2)).
@@ -74,8 +74,9 @@ The application should be accessible at http://localhost:9393, it should have th
 
 ## Part II
   0. Delete any containers running from the last part.
-  1. Create a `docker-compose.yaml` file for the setup from part I.
-  2. One should be able to run the application with `docker-compose up`.
+  1. Use a `.env` file to pass environment variables used in part I.
+  2. Create a `docker-compose.yaml` file for the setup from part I.
+  3. One should be able to run the application with `docker-compose up`.
 
 ### Save the solution
   - Copy the `docker-compose.yaml` to the `solution` directory.
