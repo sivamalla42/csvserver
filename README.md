@@ -39,9 +39,9 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
      2, 34
      ```
      These are comma separated values with index and a random number.
-     - Running the script with arguments `bash gencsv.sh 0 9`, should generate the file `inputFile` with 10 such entries in current directory.
+     - Running the script with two arguments, should generate the file `inputFile` with 10 such entries in current directory.
      - *You should be able to extend this script to generate any number of entries, for example 100000 entries.*
-     - Run the script to generate the `inputFile`. Make sure that the generated file is readable by other users.
+     - Run the script with arguments `2 10` to generate the `inputFile`. Make sure that the generated file is readable by other users.
   4. Run the container again in the background with file generated in (3) available inside the container (remember the reason you found in (2)).
   5. Get shell access to the container and find the port on which the application is listening. Once done, stop / delete the running container.
   6. Same as (4), run the container and make sure,
