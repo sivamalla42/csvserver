@@ -39,9 +39,8 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
      2, 34
      ```
      These are comma separated values with index and a random number.
-     - Running the script with two arguments, should generate the file `inputFile` with 10 such entries in current directory.
+     - Running the script with two arguments as `./gencsv.sh 0 9`, should generate the file `inputFile` with 10 such entries in current directory. Where the index of first entry is `0` and the last entry is `9`.
      - *You should be able to extend this script to generate any number of entries, for example 100000 entries.*
-     - Run the script with arguments `2 10` to generate the `inputFile`. Make sure that the generated file is readable by other users.
   4. Run the container again in the background with file generated in (3) available inside the container (remember the reason you found in (2)).
   5. Get shell access to the container and find the port on which the application is listening. Once done, stop / delete the running container.
   6. Same as (4), run the container and make sure,
@@ -74,8 +73,8 @@ The application should be accessible at http://localhost:9393, it should have th
 
 ## Part II
   0. Delete any containers running from the last part.
-  1. Use a `.env` file to pass environment variables used in part I.
-  2. Create a `docker-compose.yaml` file for the setup from part I.
+  1. Create a `docker-compose.yaml` file for the setup from part I.
+  2. Use an environment variable file named `csvserver.env` in `docker-compose.yaml` to pass environment variables used in part I.
   3. One should be able to run the application with `docker-compose up`.
 
 ### Save the solution
