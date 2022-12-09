@@ -39,14 +39,14 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
      2, 34
      ```
      These are comma separated values with index and a random number.
-     - Running the script with two arguments as `./gencsv.sh 0 9`, should generate the file `inputFile` with 10 such entries in current directory. Where the index of first entry is `0` and the last entry is `9`.
+     - Running the script with two arguments as `./gencsv.sh 2 8`, should generate the file `inputFile` with 7 such entries in current directory. Where the index of first entry is `2` and the last entry is `8`.
   4. Run the container again in the background with file generated in (3) available inside the container (remember the reason you found in (2)).
   5. Get shell access to the container and find the port on which the application is listening. Once done, stop / delete the running container.
   6. Same as (4), run the container and make sure,
      - The application is accessible on the host at http://localhost:9393
      - Set the environment variable `CSVSERVER_BORDER` to have value `Orange`.
 
-The application should be accessible at http://localhost:9393, it should have the 10 entries from `inputFile` and the welcome note should have an orange color border.
+The application should be accessible at http://localhost:9393, it should have the 7 entries from `inputFile` and the welcome note should have an orange color border.
 
 > **NOTE**: If you are using play-with-docker.com then you will see the number 9393 highlighted at the top. You can access the application by clicking on that instead of using http://localhost:9393
 
