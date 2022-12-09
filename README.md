@@ -15,7 +15,7 @@ You don't need to know Docker or Prometheus beforehand to solve this assignment,
     docker pull prom/prometheus:v2.22.0
     ```
   - Clone this repository to your machine. (**Don't fork it**).
-  - ```git clone --single-branch --branch update-assignment https://github.com/infracloudio/csvserver.git```
+    - `git clone --single-branch --branch update-assignment https://github.com/infracloudio/csvserver.git`
   - Use `bash` shell for all the operations, other shells like ksh, fish etc might cause unknown issues.
   - Create a new **private** repository on GitHub.
   - `cd` into the `solution` directory, and perform all the steps from that directory.
