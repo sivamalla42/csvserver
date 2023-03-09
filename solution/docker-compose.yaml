@@ -1,0 +1,23 @@
+# Latest Docker Compose version
+version: "2.3"
+
+# List of Docker container services to run (in this case only one)
+services:
+
+  # Name of the service ("serve") that serves HTML site
+  InputData:
+
+    environment:
+       COMPOSE_PROJECT_NAME: "orange"
+
+    # Use httpd:2.4 image
+    image: infracloudio/csvserver:latest
+
+    # Make site accessible at http://localhost:8080/
+    ports:
+      - "9393:9300"
+
+    # Mount current /src directory to /usr/local/apache2/htdocs/ directory in the container
+    volumes:
+      - ${PWD}/inputdata:/csvserver/inputdata
+    
