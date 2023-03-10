@@ -8,7 +8,7 @@ services:
   InputData:
 
     environment:
-       COMPOSE_PROJECT_NAME: "orange"
+       CSVSERVER_BORDER: "orange"
 
     # Use httpd:2.4 image
     image: infracloudio/csvserver:latest
