@@ -3,6 +3,19 @@ version: "2.3"
 
 # List of Docker container services to run (in this case only one)
 services:
+  
+  prometheus:
+    image: prom/prometheus:v2.22.0
+
+    ports:
+      - 9090:9090
+   
+    volumes:
+      - type: bind
+        source: ./prometheus/prometheus.yml
+        target: /etc/prometheus/prometheus.yml
+
+
 
   # Name of the service ("serve") that serves HTML site
   InputData:
@@ -20,4 +33,6 @@ services:
     # Mount current /src directory to /usr/local/apache2/htdocs/ directory in the container
     volumes:
       - ${PWD}/inputdata:/csvserver/inputdata
+  
+
     
