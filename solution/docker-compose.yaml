@@ -6,10 +6,8 @@ services:
   
   prometheus:
     image: prom/prometheus:v2.22.0
-
     ports:
       - 9090:9090
-   
     volumes:
       - type: bind
         source: ./prometheus/prometheus.yml
@@ -22,15 +20,10 @@ services:
 
     environment:
        CSVSERVER_BORDER: "orange"
-
-    # Use httpd:2.4 image
     image: infracloudio/csvserver:latest
-
-    # Make site accessible at http://localhost:8080/
+    container_name: InputData
     ports:
       - "9393:9300"
-
-    # Mount current /src directory to /usr/local/apache2/htdocs/ directory in the container
     volumes:
       - ${PWD}/inputdata:/csvserver/inputdata
   

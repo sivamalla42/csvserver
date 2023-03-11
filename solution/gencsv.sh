@@ -1,9 +1,5 @@
-
-
-
-
-
->/Users/s0m073r/Documents/devops/infracloud/csvserver/solution/inputdata
+#!/bin/bash
+>${PWD}/inputdata
 num1=$1
 num2=$2
 
@@ -19,7 +15,7 @@ ex="$(( ${num1}- ${num2} ))"
 
 for (( j = $num1; j<= $num2; j++))
 do
-    echo $j, $(( $RANDOM % 50 + 1 )) >> /Users/s0m073r/Documents/devops/infracloud/csvserver/solution/inputdata
+    echo $j, $(( $RANDOM % 50 + 1 )) >> ${PWD}/inputdata
 done
 
 
